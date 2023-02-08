@@ -16,14 +16,16 @@ public class ControlFlow {
      //   int[] brojevi={3,5,4,2,7,10,60,81};
      //   ForWithArrays kolekcija = new ForWithArrays(brojevi);
      //   kolekcija.prikaziParneBrojeve();
-
+        //
      //   BreakStatment pronadjiIndeks = new BreakStatment(brojevi,3);
      //   pronadjiIndeks.pronadjiIndeks();
 
-        int [][] niz2D= {{1,8,56,23,45,7},{45,878,12,4,9},{777,264,7369}};
-        LabeledBeakeStatment pronadjiIndeksU2DNizu= new LabeledBeakeStatment(niz2D,9);
-        pronadjiIndeksU2DNizu.pronadjiIndeks();
+     //   int [][] niz2D= {{1,8,56,23,45,7},{45,878,12,4,9},{777,264,7369}};
+     //   LabeledBeakeStatment pronadjiIndeksU2DNizu= new LabeledBeakeStatment(niz2D,9);
+     //   pronadjiIndeksU2DNizu.pronadjiIndeks();
 
+        ContntinueFor slovaURecenici = new ContntinueFor("Ovo je random tekst",'t');
+        slovaURecenici.kolikoSlovaImaURecenici();
     }
 }
 
@@ -171,4 +173,25 @@ class LabeledBeakeStatment{
     }
 
 
+}
+
+class ContntinueFor{
+    String tekst;
+    char slovo;
+
+    ContntinueFor(String tekst,char slovo){
+        this.tekst=tekst;
+        this.slovo=slovo;
+    }
+
+    void kolikoSlovaImaURecenici(){
+        int brojac=0;
+        for(int i=0;i<tekst.length();i++){
+            if(tekst.charAt(i)!=slovo){
+                continue;
+            }
+            brojac++;
+        }
+        System.out.println("Slova "+slovo+" ima "+brojac+" puta u recenici");
+    }
 }
