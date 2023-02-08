@@ -24,8 +24,11 @@ public class ControlFlow {
      //   LabeledBeakeStatment pronadjiIndeksU2DNizu= new LabeledBeakeStatment(niz2D,9);
      //   pronadjiIndeksU2DNizu.pronadjiIndeks();
 
-        ContntinueFor slovaURecenici = new ContntinueFor("Ovo je random tekst",'t');
-        slovaURecenici.kolikoSlovaImaURecenici();
+      //  ContntinueFor slovaURecenici = new ContntinueFor("Ovo je random tekst",'t');
+      //  slovaURecenici.kolikoSlovaImaURecenici();
+
+        Switch danUNedelji=new Switch(7);
+        danUNedelji.daniUSedmici();
     }
 }
 
@@ -193,5 +196,26 @@ class ContntinueFor{
             brojac++;
         }
         System.out.println("Slova "+slovo+" ima "+brojac+" puta u recenici");
+    }
+}
+
+class Switch{
+    int dan;
+
+    Switch(int dan){
+        this.dan=dan;
+    }
+
+    void daniUSedmici(){
+        switch (dan) {
+            case 1 -> System.out.println("Ponedeljak");
+            case 2 -> System.out.println("Utorak");
+            case 3 -> System.out.println("Sreda");
+            case 4 -> System.out.println("Cetvrtak");
+            case 5 -> System.out.println("Petak");
+            case 6 -> System.out.println("Subota");
+            case 7 -> System.out.println("Nedelja");
+            default -> System.out.println("Nepostojeca vrednost");
+        }
     }
 }
