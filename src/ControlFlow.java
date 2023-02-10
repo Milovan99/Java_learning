@@ -1,8 +1,8 @@
 public class ControlFlow {
 
     public static void main(String[] args) {
-     //   IfStatment ucenik = new IfStatment(82,"Milovan");
-     //   ucenik.rezultat();
+        IfStatment ucenik = new IfStatment(82,"Milovan");
+        ucenik.rezultat();
 
      //   WhileStatment brojac = new WhileStatment(5);
      //   brojac.izbroj();
@@ -58,6 +58,7 @@ class IfStatment{
 
     void rezultat(){
         System.out.println("Ucenik "+ime+" dobio je ocenu "+ocena());
+        System.out.println((ocena()>5)?"Prolaz":"Nije prolaz");
     }
 
 }
