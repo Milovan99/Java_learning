@@ -1,8 +1,8 @@
 public class ControlFlow {
 
     public static void main(String[] args) {
-        IfStatment ucenik = new IfStatment(82,"Milovan");
-        ucenik.rezultat();
+     //   IfStatment ucenik = new IfStatment(82,"Milovan");
+     //   ucenik.rezultat();
 
      //   WhileStatment brojac = new WhileStatment(5);
      //   brojac.izbroj();
