@@ -18,6 +18,7 @@ public class MainLinkedList {
         list.display();
         list.delete(8);
         list.display();
+        System.out.println(list.findNode(999));
     }
 }
 
