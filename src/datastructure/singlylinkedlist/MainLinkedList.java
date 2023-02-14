@@ -4,9 +4,10 @@ public class MainLinkedList {
     public static void main(String[] args) {
 
         LinkedList list = new LinkedList();
-        list.push(4);
-        list.push(8);
-        list.push(9);
+
+        list.append(202);
+        list.display();
+        list.deleteLast();
         list.display();
     }
 }
@@ -68,7 +69,7 @@ class LinkedList{
         }
 
         temp.next=newNode;
-        return;
+
     }
 
     public int deleteFirst() {
@@ -78,7 +79,13 @@ class LinkedList{
     }
 
     public int deleteLast(){
+
         int val=head.data;
+
+        if(head.next==null){
+            head=null;
+            return val;
+        }
         Node last=head;
         Node prevLast=head;
         while (last.next!=null){
@@ -119,12 +126,29 @@ class LinkedList{
         return temp.data;
     }
 
+    public Node findNode(int val){
+        Node temp= head;
+        while (temp.data!=val){
+            temp=temp.next;
+        }
+        return temp;
+    }
+
     public void display(){
         Node temp=head;
 
         while (temp!=null){
         System.out.print(temp.data+"->");
         temp=temp.next;
+        }
+        System.out.println("Null");
+    }
+    public void displayNode(){
+        Node temp=head;
+
+        while (temp!=null){
+            System.out.print(temp+" -> ");
+            temp=temp.next;
         }
         System.out.println("Null");
     }
