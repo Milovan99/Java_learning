@@ -86,5 +86,25 @@ class LinkedList{
         return val;
     }
 
+    public int delete(int val){
+
+        Node temp=head;
+        int valeToReturn=head.data;
+        if(temp.next!=null && temp.data==val){
+            head=head.next;
+            return valeToReturn;
+        }else{
+            head=null;
+        }
+        while (temp.next.data!=val){
+                temp=temp.next;
+        }
+        valeToReturn=temp.next.data;
+
+        temp.next=temp.next.next;
+
+        return valeToReturn;
+    }
+
 }
 
