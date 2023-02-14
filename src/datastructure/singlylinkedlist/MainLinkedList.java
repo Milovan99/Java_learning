@@ -29,5 +29,23 @@ class LinkedList{
         //Making new node head of Linked ist
         head=pocetak;
     }
+
+    //Inserts a new node after the given prev_node
+
+    public void insertAfter(int val,Node node){
+        if (node == null) {
+            System.out.println(
+                    "The given previous node cannot be null");
+            return;
+        }
+
+        //Create node
+        Node newNode=new Node(val);
+        // Make next of new Node as next of prev_node
+        newNode.next=node.next;
+        //make next of prev_node as new_node
+        node.next=newNode;
+
+    }
 }
 
