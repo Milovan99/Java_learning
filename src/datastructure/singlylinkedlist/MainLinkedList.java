@@ -106,5 +106,22 @@ class LinkedList{
         return valeToReturn;
     }
 
+    public int find(int val){
+        Node temp= head;
+        while (temp.data!=val){
+            temp=temp.next;
+        }
+        return temp.data;
+    }
+
+    public void display(){
+        Node temp=head;
+
+        while (temp.next!=null){
+        System.out.print(temp.data+"->");
+        }
+        System.out.println("Null");
+    }
+
 }
 
