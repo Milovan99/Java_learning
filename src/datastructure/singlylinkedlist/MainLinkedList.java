@@ -4,7 +4,12 @@ public class MainLinkedList {
     public static void main(String[] args) {
 
         LinkedList list = new LinkedList();
-
+        list.push(4);
+        list.push(8);
+        list.push(9);
+        list.display();
+        list.insertAfter(999,list.findNode(4));
+        list.display();
         list.append(202);
         list.display();
         list.deleteLast();
