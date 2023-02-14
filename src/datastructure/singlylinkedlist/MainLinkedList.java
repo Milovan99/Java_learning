@@ -3,6 +3,11 @@ package datastructure.singlylinkedlist;
 public class MainLinkedList {
     public static void main(String[] args) {
 
+        LinkedList list = new LinkedList();
+        list.push(4);
+        list.push(8);
+        list.push(9);
+        list.display();
     }
 }
 
@@ -23,7 +28,7 @@ class LinkedList{
 
     public void push(int val){
         //Creating new node
-        Node pocetak = new Node(5);
+        Node pocetak = new Node(val);
         //Linking node to currently head of Linked list
         pocetak.next=head;
         //Making new node head of Linked ist
@@ -117,8 +122,9 @@ class LinkedList{
     public void display(){
         Node temp=head;
 
-        while (temp.next!=null){
+        while (temp!=null){
         System.out.print(temp.data+"->");
+        temp=temp.next;
         }
         System.out.println("Null");
     }
