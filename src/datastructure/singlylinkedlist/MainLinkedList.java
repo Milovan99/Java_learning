@@ -12,7 +12,11 @@ public class MainLinkedList {
         list.display();
         list.append(202);
         list.display();
+        list.deleteFirst();
+        list.display();
         list.deleteLast();
+        list.display();
+        list.delete(8);
         list.display();
     }
 }
@@ -110,8 +114,6 @@ class LinkedList{
         if(temp.next!=null && temp.data==val){
             head=head.next;
             return valeToReturn;
-        }else{
-            head=null;
         }
         while (temp.next.data!=val){
                 temp=temp.next;
