@@ -47,5 +47,44 @@ class LinkedList{
         node.next=newNode;
 
     }
+
+    public void append(int val){
+        if(head==null){
+            head=new Node(val);
+            return;
+        }
+
+        Node newNode=new Node(val);
+        newNode.next=null;
+
+        Node temp = head;
+        while (temp.next!=null){
+            temp=temp.next;
+        }
+
+        temp.next=newNode;
+        return;
+    }
+
+    public int deleteFirst() {
+        int val = head.data;
+        head = head.next;
+        return val;
+    }
+
+    public int deleteLast(){
+        int val=head.data;
+        Node last=head;
+        Node prevLast=head;
+        while (last.next!=null){
+            prevLast=last;
+
+            last=last.next;
+            val=last.data;
+        }
+        prevLast.next=null;
+        return val;
+    }
+
 }
 
