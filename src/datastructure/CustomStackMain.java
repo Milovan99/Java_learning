@@ -2,11 +2,13 @@ package datastructure;
 
 public class CustomStackMain {
     public static void main(String[] args) throws StackException {
-        CustomStack stack=new CustomStack(5);
+        DynamicStack stack=new DynamicStack(5);
         stack.push(4);
         stack.push(78);
         stack.push(87);
         stack.push(9);
+        stack.push(6);
+        stack.push(2);
 
         System.out.println(stack.pop());
         System.out.println(stack.pop());
@@ -54,10 +56,10 @@ class CustomStack{
         return data[ptr];
     }
 
-    private boolean isFul() {
+    public boolean isFul() {
         return ptr == data.length-1;
     }
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return ptr == -1;
     }
 }
